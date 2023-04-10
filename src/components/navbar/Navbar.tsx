@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import * as S from "./Navbar.styles";
 
 export const Navbar: React.FC = () => {
