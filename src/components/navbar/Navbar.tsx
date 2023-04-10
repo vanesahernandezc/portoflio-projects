@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import * as S from "./Navbar.styles";
 
-const Navbar = () => {
-  const [showMenuBurguer, setShowMenuBurguer] = useState<any>(false);
-
+export const Navbar: React.FC = () => {
+  const [showMenuBurguer, setShowMenuBurguer] = useState<boolean>(false);
+  console.log(showMenuBurguer);
   return (
     <S.ContainerNavbar>
       <S.ContainerLogo>
@@ -13,14 +14,16 @@ const Navbar = () => {
           <h2>Frontend Developer</h2>
         </div>
       </S.ContainerLogo>
-
       <S.ContainerBurguer onClick={() => setShowMenuBurguer(!showMenuBurguer)}>
         <S.BurguerMenu />
         <S.BurguerMenu />
         <S.BurguerMenu />
       </S.ContainerBurguer>
+      <S.ContainerItems showMenuBurguer={showMenuBurguer}>
+        <p>About me</p>
+        <p>Projects</p>
+        <S.Button>Contact me</S.Button>
+      </S.ContainerItems>
     </S.ContainerNavbar>
   );
 };
-
-export default Navbar;
