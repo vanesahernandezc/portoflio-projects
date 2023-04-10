@@ -5,7 +5,6 @@ import logoGithub from "../../svg/github.svg";
 import logoWebsite from "../../svg/website.svg";
 
 const Projects = () => {
-  console.log(projectsPortfolio);
   return (
     <S.ContainerProjects id="projects">
       <S.Title>

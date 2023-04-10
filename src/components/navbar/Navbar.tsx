@@ -3,7 +3,6 @@ import * as S from "./Navbar.styles";
 
 export const Navbar: React.FC = () => {
   const [showMenuBurguer, setShowMenuBurguer] = useState<boolean>(false);
-  console.log(showMenuBurguer);
   return (
     <S.ContainerNavbar>
       <S.ContainerLogo>
