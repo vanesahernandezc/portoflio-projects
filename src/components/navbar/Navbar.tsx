@@ -3,6 +3,9 @@ import * as S from "./Navbar.styles";
 
 export const Navbar: React.FC = () => {
   const [showMenuBurguer, setShowMenuBurguer] = useState<boolean>(false);
+  const clickItemNav = (item: any) => {
+    document.getElementById(item)?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <S.ContainerNavbar>
       <S.ContainerLogo>
@@ -18,9 +21,9 @@ export const Navbar: React.FC = () => {
         <S.BurguerMenu />
       </S.ContainerBurguer>
       <S.ContainerItems showMenuBurguer={showMenuBurguer}>
-        <p>About me</p>
-        <p>Projects</p>
-        <S.Button>Contact me</S.Button>
+        <p onClick={() => clickItemNav("about-me")}>About me</p>
+        <p onClick={() => clickItemNav("projects")}>Projects</p>
+        <S.Button onClick={() => clickItemNav("contact")}>Contact me</S.Button>
       </S.ContainerItems>
     </S.ContainerNavbar>
   );
